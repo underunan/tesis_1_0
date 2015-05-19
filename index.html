@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description" content/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TiendaBuff</title>
+	<script type="text/javascript" src=""></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>-->
+	<script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="resources/jquery.vide.js"></script>
+	<link rel="stylesheet" type="text/css" href="resources/normalize/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="resources/bootstrap/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/mobile/style_mobile.css"/>
+</head>
+<body class="container">
+	<!--[if gt IE 9]>
+		<p class="chromeframe">
+			Tú estas utilizando un<strong>navegador obsoleto</strong>. Por favor <a href="http://browsehappy.com>actualiza tu navegador</a> or <a href="http://www.google.com/chromeframe/?redirect=true">active Google Chrome Frame</a> para tener una mejor experiencia.
+		</p>
+	<![endif]-->
+	<!--[if lt IE 9]>
+  <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+<![endif]-->
+	<!--Primero diseñamos la pagina para mobil-->
+
+	<!--Cabecera-->
+	<header class="row-fluid">
+		<!--Este botón mostrara las opciones del ménu -->
+		<nav class="navbar navbar-default visible-xs">
+		<div class="container">
+			<div class="navbar-header">
+				<button id="btn_menu" type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#menu" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<img src="img/tiendaBuff.png" class="img-responsive" width="75px" alt="Responsive image"/>
+				
+			</div>
+
+			<div class="collapse navbar-collapse" id="menu">
+				<ul class="nav navbar-nav navbar-right">
+				<li class="active"><a href="#inicio">INICIO</a></li>
+				<li><a href="#entra">ENTRAR</a></li>
+				<li><a href="#unete">ÚNETE</a></li>
+				<li><a href="#equipo">CONTACTO</a></li>
+			</ul>
+			</div>
+		
+		</div>
+		</nav>
+		<div id="logo" class="hidden-xs">
+			<figure>
+			<a href="#"><img src="img/tiendaBuff.png" class="" width="90px" alt="Responsive image"/></a>
+			</figure>
+		</div>
+		<nav class="hidden-xs" id="menu">
+			<a href="#inicio" class=""><span>INICIO</span></a>
+			<a href="#entra" class=""><span>ENTRA</span></a>
+			<a href="#unete" class="btn btn-danger"><span>UNETE</span></a>
+		</nav>
+
+	</header>
+
+	<!--Busqueda de lugar, precio y producto-->
+	<section id="central" class="row">
+		<!--Imagen de fondo, cuando sobrepase la resolución de 768px esta imagen se econderá y tendra que mostrar un video-->
+		<figure class="fondo visible-xs">
+			<!--<img src="img/shopping.jpg" class="col-xs-12 img-responsive" alt="Img wallpaper"/>-->
+			<img src="resources/video/video.png" class="img-responsive col-xs-12" alt="imagen de fondo">
+		</figure>
+		<div id="block_video" class="hidden-xs" data-vide-bg="resources/video/video" data-vide-options="position: 50% top"></div>
+		<form class="col-xs-12 col-md-12 form-inline">
+			<div class="form-group input-group-md form">
+			<!--Opciones de busquedas habilitadas-->
+			<input type="text" class="form-control col-md-5" id="lugar" name="lugar" placeholder="¿En donde quieres buscar?"/>
+			<input type="text" class="form-control col-md-5" id="producto" name="producto" placeholder="¿Qué estas buscando?"/>
+			<!--Estas opciones estarán deshabilitadas cuando la resolución de pantalla sea menor de 768px -->
+			<!--
+			<div class="hidden-xs group-radio">
+					<label class="radio-inline">
+						<input id="optionRadios1" type="radio" name="optionsRadio" value="option1" checked/>
+						C$
+					</label>					
+					<label class="radio-inline">
+						<input id="optionRadios1" type="radio" name="optionsRadio" value="option2"/>
+						$
+					</label>
+
+				</div>
+				<input type="text" class="form-control hidden-xs" id="valor" name="_0" placeholder="DESDE"/>
+				<input type="text" class="form-control hidden-xs" id="valor" name="_100" placeholder="HASTA">
+			
+			-->
+			<input type="button" class="form-control btn btn-danger col-md-10" value="Buscar" name="buscar">
+		</div>
+		</form>
+	</section>
+
+	<!--Información acerca de la página-->
+	<section id="info">
+		<article class="jumbotron">
+			<h1>Explora las tiendas</h1>
+			<p>Ten una buena experiencia encontrando tiendas desde tu casa.</p>
+		</article>
+	</section>
+
+	<!--Tiendas a publicar en pagina inicio-->
+	<section id="publicacion" class="row">
+		<!--Las etiquetas article se repetirán por cada tienda publicada-->
+		<article class="col-xs-12 col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<span class="badge">C$450</span>
+					<img src="img/producto_vestido.jpg" class="" alt="Producto vestido">
+					<div class="bg-info caption">
+						<h3 class="text-primary">Nombre del producto</h3>
+						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
+						<p class="info"><a href="#producto" class=" btn btn-primary btn-danger btn-lg" role="button">Ver más</a></p>
+					</div>
+				</div>
+			
+		</article>
+
+		<article class="col-xs-12 col-sm-3 col-md-3">
+			
+				<div class="thumbnail">
+					<span class="badge">C$250</span>
+					<img src="img/producto_gorra.jpg" class="img-responsive" alt="Producto vestido">
+					<div class="bg-info caption">
+						<h3 class="text-primary">Nombre del producto</h3>
+						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
+						<p class="info"><a href="#producto" class=" btn btn-primary btn-danger btn-lg" role="button">Ver más</a></p>
+					</div>
+				</div>
+			
+		</article>
+
+		<article class="col-xs-12 col-sm-3 col-md-3">
+			
+				<div class="thumbnail">
+					<span class="badge">C$450</span>
+					<img src="img/producto_computadora.jpg" class="img-responsive" alt="Producto vestido">
+					<div class="bg-info caption">
+						<h3 class="text-primary">Nombre del producto</h3>
+						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
+						<p class="info"><a href="#producto" class=" btn btn-primary btn-danger btn-lg" role="button">Ver más</a></p>
+					</div>
+				</div>
+			
+		</article>
+		
+		<article class="col-xs-12 col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<span class="badge">C$450</span>
+					<img src="img/producto_vestido.jpg" class="img-responsive" alt="Producto vestido">
+					<div class="bg-info caption">
+						<h3 class="text-primary">Nombre del producto</h3>
+						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
+						<p class="info"><a href="#producto" class=" btn btn-primary btn-danger btn-lg" role="button">Ver más</a></p>
+					</div>
+				</div>
+			
+		</article>
+
+		<article class="col-xs-12 col-sm-3 col-md-3">
+			
+				<div class="thumbnail">
+					<span class="badge">C$250</span>
+					<img src="img/producto_gorra.jpg" class="img-responsive" alt="Producto vestido">
+					<div class="bg-info caption">
+						<h3 class="text-primary">Nombre del producto</h3>
+						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
+						<p class="info"><a href="#producto" class=" btn btn-primary btn-danger btn-lg" role="button">Ver más</a></p>
+					</div>
+				</div>
+			
+		</article>
+
+		<article class="col-xs-12 col-sm-3 col-md-3">
+				<div class="thumbnail">
+					<span class="badge">C$450</span>
+					<img src="img/producto_vestido.jpg" class="img-responsive" alt="Producto vestido">
+					<div class="bg-info caption">
+						<h3 class="text-primary">Nombre del producto</h3>
+						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
+						<p class="info"><a href="#producto" class=" btn btn-primary btn-danger btn-lg" role="button">Ver más</a></p>
+					</div>
+				</div>
+			
+		</article>
+	</section>
+	<footer class="panel-footer hidden-xs">
+		<h3>Pié de página</h3>
+	</footer>
+</body>
+</html>
