@@ -28,7 +28,7 @@
 	<!--Cabecera-->
 	<header class="row-fluid">
 		<!--Este botón mostrara las opciones del ménu -->
-		<nav class="navbar navbar-default visible-xs">
+		<nav class="navbar navbar-default hidden-md hidden-lg">
 		<div class="container">
 			<div class="navbar-header">
 				<button id="btn_menu" type="button" class="navbar-toggle collapsed " data-toggle="collapse" data-target="#menu" aria-expanded="false">
@@ -53,15 +53,16 @@
 		
 		</div>
 		</nav>
-		<div id="logo" class="hidden-xs">
+		<div id="logo" class="visible-md visible-lg">
 			<figure>
 			<a href="#"><img src="img/tiendaBuff.png" class="" width="90px" alt="Responsive image"/></a>
 			</figure>
 		</div>
-		<nav class="hidden-xs" id="menu">
-			<a href="#inicio" class=""><span>INICIO</span></a>
-			<a href="#entra" class=""><span>ENTRA</span></a>
-			<a href="#unete" class="btn btn-danger"><span>UNETE</span></a>
+		<nav class="hidden-xs hidden-sm" id="menu">
+			<a href="#inicio"><span>INICIO</span></a>
+			<a href="#entra"><span>ENTRA</span></a>
+			<a href="#unete"><span>UNETE</span></a>
+			<a href="#publica_tienda" class="btn btn-success"><span>Publica tu tienda</span></a>
 		</nav>
 
 	</header>
@@ -71,14 +72,14 @@
 		<!--Imagen de fondo, cuando sobrepase la resolución de 768px esta imagen se econderá y tendra que mostrar un video-->
 		<figure class="fondo visible-xs">
 			<!--<img src="img/shopping.jpg" class="col-xs-12 img-responsive" alt="Img wallpaper"/>-->
-			<img src="resources/video/video.png" class="img-responsive col-xs-12" alt="imagen de fondo">
+			<img src="resources/video/video.png" class="img-responsive" alt="imagen de fondo">
 		</figure>
-		<div id="block_video" class="hidden-xs" data-vide-bg="resources/video/video" data-vide-options="position:50% top"></div>
+		<div id="block_video" style="height:550px; width:100%;" class="hidden-xs " data-vide-bg="resources/video/video"></div>
 		<form class="col-xs-12 col-md-12 form-inline">
 			<div class="form-group input-group-md form">
 			<!--Opciones de busquedas habilitadas-->
-			<input type="text" class="form-control col-md-5" id="lugar" name="lugar" placeholder="¿En donde quieres buscar?"/>
-			<input type="text" class="form-control col-md-5" id="producto" name="producto" placeholder="¿Qué estas buscando?"/>
+			<input type="text" class="form-control" id="lugar" name="lugar" placeholder="¿En donde quieres buscar?"/>
+			<input type="text" class="form-control" id="producto" name="producto" placeholder="¿Qué estas buscando?"/>
 			<!--Estas opciones estarán deshabilitadas cuando la resolución de pantalla sea menor de 768px -->
 			<!--
 			<div class="hidden-xs group-radio">
@@ -96,13 +97,35 @@
 				<input type="text" class="form-control hidden-xs" id="valor" name="_100" placeholder="HASTA">
 			
 			-->
-			<input type="button" class="form-control btn btn-danger col-md-10" value="Buscar" name="buscar">
+			<button type="button" class="form-control btn btn-danger">Buscar</button>
 		</div>
 		</form>
 	</section>
 
 	<!--Información acerca de la página-->
 	<section id="info">
+		<article class="row obj">
+			<div class="col-sm-4 col-md-4 col-lg-4 ">
+				<div class="thumbnail">
+					<img src="img/brujula_1.png" alt="brujula" width="150px">
+					<div class="caption">
+						<h3>Explorá</h3>
+						<p>Explorá las tiendas desde tu casa.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-sm-4 col-md-4 col-lg-4">
+				<div class="thumbnail">
+					<img src="img/localizacion_1.png" alt="localización" width="150px">
+					<div class="caption">
+						<h3>Unete</h3>
+						<p>Haz que la gente encuentre tu tienda publica tu tienda <a href="#" class="btn btn-info" role="button">aquí</a></p>
+					</div>
+				</div>
+			</div>
+		</article>
+
 		<article class="jumbotron">
 			<h1>Explora las tiendas</h1>
 			<p>Ten una buena experiencia encontrando tiendas desde tu casa.</p>
@@ -129,7 +152,7 @@
 			
 				<div class="thumbnail">
 					<span class="badge">C$250</span>
-					<img src="img/producto_gorra.jpg" class="img-responsive" alt="Producto vestido">
+					<img src="img/producto_gorra.jpg" alt="Producto vestido">
 					<div class="bg-info caption">
 						<h3 class="text-primary">Nombre del producto</h3>
 						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
@@ -143,7 +166,7 @@
 			
 				<div class="thumbnail">
 					<span class="badge">C$450</span>
-					<img src="img/producto_computadora.jpg" class="img-responsive" alt="Producto vestido">
+					<img src="img/producto_computadora.jpg" alt="Producto vestido">
 					<div class="bg-info caption">
 						<h3 class="text-primary">Nombre del producto</h3>
 						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
@@ -156,7 +179,7 @@
 		<article class="col-xs-12 col-sm-3 col-md-3">
 				<div class="thumbnail">
 					<span class="badge">C$450</span>
-					<img src="img/producto_vestido.jpg" class="img-responsive" alt="Producto vestido">
+					<img src="img/producto_vestido.jpg" alt="Producto vestido">
 					<div class="bg-info caption">
 						<h3 class="text-primary">Nombre del producto</h3>
 						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
@@ -170,7 +193,7 @@
 			
 				<div class="thumbnail">
 					<span class="badge">C$250</span>
-					<img src="img/producto_gorra.jpg" class="img-responsive" alt="Producto vestido">
+					<img src="img/producto_gorra.jpg" alt="Producto vestido">
 					<div class="bg-info caption">
 						<h3 class="text-primary">Nombre del producto</h3>
 						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
@@ -183,7 +206,7 @@
 		<article class="col-xs-12 col-sm-3 col-md-3">
 				<div class="thumbnail">
 					<span class="badge">C$450</span>
-					<img src="img/producto_vestido.jpg" class="img-responsive" alt="Producto vestido">
+					<img src="img/producto_vestido.jpg" alt="Producto vestido">
 					<div class="bg-info caption">
 						<h3 class="text-primary">Nombre del producto</h3>
 						<p class="">Aquí es donde se mostrara la descripción del producto...</p>
