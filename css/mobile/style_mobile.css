@@ -10,6 +10,94 @@ header{
 a{
 	color:#01A6DC;
 }
+/*
+#contacto article .thumbnail{
+	background-color: #fff;
+}
+
+#contacto article .thumbnail img{
+	height: auto;
+	width: 100%;
+}
+
+#contacto article .thumbnail .caption{
+	
+}
+
+#contacto article .thumbnail .caption h2{
+	border: 1px solid red;
+	font-size: 1.4em;
+	font-weight: bold;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 0.2em;
+	text-align: center;
+}
+
+#contacto article .thumbnail .caption h4{
+	border: 1px solid red;
+	font-size: 0.8em;
+	font-style: oblique;
+	font-weight: bold;
+	display: inline-block;
+	margin: 0;
+	text-align: center; 
+}
+
+#contacto article .thumbnail .caption a{
+	border: 1px solid red;
+	float: left;
+	display: inline-block;
+	overflow: hidden;
+}
+
+#contacto article .thumbnail a img{
+	height:30px;
+	width:  auto;
+}*/
+
+.team{
+	border:1px solid red;
+	margin: 0;
+}
+
+article figure{
+	border: 1px solid red;
+	
+}
+
+article figure img{
+	margin: 0 auto 0 auto;
+	display: block;
+	height: auto;
+	width: 300px;
+}
+
+article div{
+	display: inline-block;
+	float: left;
+}
+
+article .name_team h2{
+	margin: 0;
+}
+
+article .social_team a img{
+	height: 32px;
+	margin: 0;
+	width: 32px;
+}
+
+article .cargo_team{
+	border: 1px solid red;
+	display: inline-block;
+}
+
+article .cargo_team h4{
+
+}
+
 
 @media screen and (max-width: 800px){
 
@@ -171,18 +259,15 @@ a{
 		padding-right: 2em;
 	}
 
-	#info .jumbotron h1{
+	#info{
+		margin-top: 1.3em;
+	}
+
+	#info .jumbotron h1,#info .jumbotron p{
 		text-align: center;
 	}
 	#central form input, #central form{
 		
-	}
-
-	#info article:first-child{
-		height: auto;
-		margin-top: 1.5em;
-		overflow: hidden;
-		width: 100%;
 	}
 
 	#publicacion article div img{
